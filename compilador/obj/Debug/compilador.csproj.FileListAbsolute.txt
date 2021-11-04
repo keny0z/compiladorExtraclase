@@ -1,0 +1,90 @@
+C:\Users\Kevin\source\repos\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Kevin\source\repos\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Kevin\source\repos\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.pdb
+C:\Users\Kevin\source\repos\compilador\compilador\obj\Debug\compilador.Form1.resources
+C:\Users\Sergio\Downloads\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Sergio\Downloads\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Sergio\Downloads\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.Form1.resources
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Sergio\Downloads\compilador\compilador\obj\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.Form1.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador\compilador\obj\Debug\compilador.pdb
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.Form1.resources
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Sergio\Desktop\Machine learning\compilador\compilador\obj\Debug\compilador.pdb
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.Form1.resources
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.exe
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\obj\Debug\compilador.pdb
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\bin\Debug\compilador.exe.config
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\bin\Debug\compilador.exe
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compiladores\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.Form1.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-v3\compilador\compilador\obj\Debug\compilador.pdb
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\bin\Debug\compilador.exe.config
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\bin\Debug\compilador.exe
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\bin\Debug\compilador.pdb
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.exe
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.pdb
+D:\Usuario\Documents\Universidad Catolica de Oriente (Cloud)\Octavo semestre\Compilador-Grupo\compilador-v3-parcial\compilador\compilador\obj\Debug\compilador.FormPrincipal.resources
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\bin\Debug\compilador.exe.config
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\bin\Debug\compilador.exe
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\bin\Debug\compilador.pdb
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.FormPrincipal.resources
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.exe
+C:\Users\Sergio\Desktop\Compilador extraclase\compilador\compilador\obj\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\bin\Debug\compilador.exe.config
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\bin\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\bin\Debug\compilador.pdb
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.csproj.AssemblyReference.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.FormPrincipal.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.Properties.Resources.resources
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.csproj.GenerateResource.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.exe
+C:\Users\Kevin\Desktop\Documentos\Universidad\semestre-8\compiladores\compilador-extraclase\compilador\obj\Debug\compilador.pdb
