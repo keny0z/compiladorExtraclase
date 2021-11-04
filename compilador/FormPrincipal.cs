@@ -88,7 +88,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoLiteral = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.LITERAL);
                 foreach (ComponenteLexico componenteLiteral in ComponentesTipoLiteral)
                 {
-                    MessageBox.Show(componenteLiteral.Mostrar());
+                    //MessageBox.Show(componenteLiteral.Mostrar());
                     LexemaTipo = componenteLiteral.Mostrar();
                     LexemaTipoAuxLiteral = "\n" + LexemaTipoAuxLiteral + "\n"+ LexemaTipo;
 
@@ -98,7 +98,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoSimbolo = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.SIMBOLO);
                 foreach (ComponenteLexico componenteSimbolo in ComponentesTipoSimbolo)
                 {
-                    MessageBox.Show(componenteSimbolo.Mostrar());
+                    //MessageBox.Show(componenteSimbolo.Mostrar());
                     LexemaTipo = componenteSimbolo.Mostrar();
                     LexemaTipoAuxSimbolo = "\n" + LexemaTipoAuxSimbolo + "\n" + LexemaTipo;
 
@@ -108,7 +108,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoReservada = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.PALABRA_RESERVADA);
                 foreach (ComponenteLexico componenteReservada in ComponentesTipoReservada)
                 {
-                    MessageBox.Show(componenteReservada.Mostrar());
+                    //MessageBox.Show(componenteReservada.Mostrar());
                     LexemaTipo = componenteReservada.Mostrar();
                     LexemaTipoAuxReservada = "\n" + LexemaTipoAuxReservada + "\n" + LexemaTipo;
 
@@ -119,7 +119,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoDummy = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.DUMMY);
                 foreach (ComponenteLexico componenteDummy in ComponentesTipoDummy)
                 {
-                    MessageBox.Show(componenteDummy.Mostrar());
+                    //MessageBox.Show(componenteDummy.Mostrar());
                     LexemaTipo = componenteDummy.Mostrar();
                     LexemaTipoAuxDummy = "\n" + LexemaTipoAuxDummy + "\n" + LexemaTipo;
 
@@ -132,6 +132,14 @@ namespace compilador
                     MessageBox.Show(errorLexico.Mostrar());
                     LexemaTipo = errorLexico.Mostrar();
                     ErroresLexicos = "\n" + ErroresLexicos + "\n" + LexemaTipo;
+
+                }
+                List<Error> ErroresTipoSintactico = GestorErrores.ObtenerInstancia().ObtenerErrores(TipoError.SINTACTICO);
+                foreach (Error errorSintactico in ErroresTipoSintactico)
+                {
+                    MessageBox.Show(errorSintactico.Mostrar());
+                    LexemaTipo = errorSintactico.Mostrar();
+                    ErroresSintacticos = "\n" + ErroresSintacticos + "\n" + LexemaTipo;
 
                 }
 
@@ -200,7 +208,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoLiteral = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.LITERAL);
                 foreach (ComponenteLexico componenteLiteral in ComponentesTipoLiteral)
                 {
-                    MessageBox.Show(componenteLiteral.Mostrar());
+                    //MessageBox.Show(componenteLiteral.Mostrar());
                     LexemaTipo = componenteLiteral.Mostrar();
                     LexemaTipoAuxLiteral = "\n" + LexemaTipoAuxLiteral + "\n" + LexemaTipo;
 
@@ -210,7 +218,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoSimbolo = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.SIMBOLO);
                 foreach (ComponenteLexico componenteSimbolo in ComponentesTipoSimbolo)
                 {
-                    MessageBox.Show(componenteSimbolo.Mostrar());
+                    //MessageBox.Show(componenteSimbolo.Mostrar());
                     LexemaTipo = componenteSimbolo.Mostrar();
                     LexemaTipoAuxSimbolo = "\n" + LexemaTipoAuxSimbolo + "\n" + LexemaTipo;
 
@@ -220,7 +228,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoReservada = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.PALABRA_RESERVADA);
                 foreach (ComponenteLexico componenteReservada in ComponentesTipoReservada)
                 {
-                    MessageBox.Show(componenteReservada.Mostrar());
+                    //MessageBox.Show(componenteReservada.Mostrar());
                     LexemaTipo = componenteReservada.Mostrar();
                     LexemaTipoAuxReservada = "\n" + LexemaTipoAuxReservada + "\n" + LexemaTipo;
 
@@ -231,7 +239,7 @@ namespace compilador
                 List<ComponenteLexico> ComponentesTipoDummy = Tabla.ObtenerInstancia().ObtenerComponentes(Tipo.DUMMY);
                 foreach (ComponenteLexico componenteDummy in ComponentesTipoDummy)
                 {
-                    MessageBox.Show(componenteDummy.Mostrar());
+                    //MessageBox.Show(componenteDummy.Mostrar());
                     LexemaTipo = componenteDummy.Mostrar();
                     LexemaTipoAuxDummy = "\n" + LexemaTipoAuxDummy + "\n" + LexemaTipo;
 
@@ -244,6 +252,14 @@ namespace compilador
                     MessageBox.Show(errorLexico.Mostrar());
                     LexemaTipo = errorLexico.Mostrar();
                     ErroresLexicos = "\n" + ErroresLexicos + "\n" + LexemaTipo;
+
+                }
+                List<Error> ErroresTipoSintactico = GestorErrores.ObtenerInstancia().ObtenerErrores(TipoError.SINTACTICO);
+                foreach (Error errorSintactico in ErroresTipoSintactico)
+                {
+                    MessageBox.Show(errorSintactico.Mostrar());
+                    LexemaTipo = errorSintactico.Mostrar();
+                    ErroresSintacticos = "\n" + ErroresSintacticos + "\n" + LexemaTipo;
 
                 }
                 Tabla.ObtenerInstancia().Limpiar(Tipo.LITERAL);

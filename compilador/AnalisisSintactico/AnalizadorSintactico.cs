@@ -34,7 +34,7 @@ namespace compilador.AnalisisSintactico
             else if (Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
             {
                 MessageBox.Show("La compilacion ha finalizado exitosamente...");
-                MessageBox.Show("Resultado: " + Pila.Pop());
+                //MessageBox.Show("Resultado: " + Pila.Pop());
             }
             else
             {
@@ -119,7 +119,27 @@ namespace compilador.AnalisisSintactico
                 Salidas(nivel + 1);
 
             }
-     
+            else if (Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
+            {
+                Pila.Push(Componente.ObtenerLexema());
+                Avanzar();
+                
+
+            }
+            else 
+            {
+                string Falla = "Componente no válido: " + Componente.ObtenerLexema();
+                string Causa = "Recibí " + Componente.ObtenerCategoria() + " ...";
+                string Solucion = "Asegúrese de que el componente sea IN o OUT...";
+
+
+                Error Error = ManejadorErrores.Error.Crear(Componente.ObtenerNumeroLinea(), Componente.ObtenerPosicionInicial(), Componente.ObtenerPosicionFinal(), Falla, Causa, Solucion, ManejadorErrores.TipoError.SINTACTICO);
+                GestorErrores.ObtenerInstancia().Agregar(Error);
+
+                throw new Exception("Error tipo stopper durante el análisis sintáctico. Por favor verifique la consola de errores...");
+
+            }
+
             FormarSalida(nivel, "<Expresion>");
         }
         //<entradas> -> VALOR <unidad_de_medida_terminal><acccion> | GET_TEMPERATURE <unidad_de_medida> | -11- SHUTDOWN <expresion> | -00- INIT <expresion>
@@ -148,8 +168,13 @@ namespace compilador.AnalisisSintactico
                 Avanzar();
                 if (Categoria.SHUTDOWN.Equals(Componente.ObtenerCategoria()))
                 {
+                    FormarEntrada(nivel, "<Entradas>");
+                    Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
                     Expresion(nivel + 1);
+                    FormarSalida(nivel, "<Entradas>");
+
+
                 }
                 
 
@@ -160,8 +185,11 @@ namespace compilador.AnalisisSintactico
                 Avanzar();
                 if (Categoria.INIT.Equals(Componente.ObtenerCategoria()))
                 {
+                    FormarEntrada(nivel, "<Entradas>");
+                    Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
-                    Expresion(nivel + 1);
+                    Expresion(nivel + 1); 
+                    FormarSalida(nivel, "<Entradas>");
                 }
 
             }
@@ -199,8 +227,11 @@ namespace compilador.AnalisisSintactico
                 Avanzar();
                 if (Categoria.ON.Equals(Componente.ObtenerCategoria()))
                 {
+                    FormarEntrada(nivel, "<Salidas>");
+                    Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
                     Expresion(nivel + 1);
+                    FormarSalida(nivel, "<Salidas>");
                 }
 
 
@@ -211,8 +242,11 @@ namespace compilador.AnalisisSintactico
                 Avanzar();
                 if (Categoria.OFF.Equals(Componente.ObtenerCategoria()))
                 {
+                    FormarEntrada(nivel, "<Salidas>");
+                    Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
                     Expresion(nivel + 1);
+                    FormarSalida(nivel, "<Salidas>");
                 }
 
             }
