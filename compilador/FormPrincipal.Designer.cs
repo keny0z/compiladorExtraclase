@@ -50,13 +50,14 @@ namespace compilador
             this.txtLiterales = new System.Windows.Forms.TextBox();
             this.txtSimbolos = new System.Windows.Forms.TextBox();
             this.TablaErrores = new System.Windows.Forms.TabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtSemanticos = new System.Windows.Forms.TextBox();
-            this.txtLexicos = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSintacticos = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtSintacticos = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLexicos = new System.Windows.Forms.TextBox();
+            this.txtSemanticos = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.chkDepurar = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.Compilador.SuspendLayout();
             this.Tablas.SuspendLayout();
@@ -77,6 +78,7 @@ namespace compilador
             // 
             // Compilador
             // 
+            this.Compilador.Controls.Add(this.chkDepurar);
             this.Compilador.Controls.Add(this.txtbLineas);
             this.Compilador.Controls.Add(this.txtbEditor);
             this.Compilador.Controls.Add(this.txtbProcesado);
@@ -326,53 +328,14 @@ namespace compilador
             this.TablaErrores.Text = "Tabla de errores";
             this.TablaErrores.UseVisualStyleBackColor = true;
             // 
-            // openFileDialog1
+            // label7
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtSemanticos
-            // 
-            this.txtSemanticos.BackColor = System.Drawing.Color.Black;
-            this.txtSemanticos.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSemanticos.ForeColor = System.Drawing.Color.White;
-            this.txtSemanticos.Location = new System.Drawing.Point(464, 48);
-            this.txtSemanticos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSemanticos.Multiline = true;
-            this.txtSemanticos.Name = "txtSemanticos";
-            this.txtSemanticos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSemanticos.Size = new System.Drawing.Size(398, 512);
-            this.txtSemanticos.TabIndex = 11;
-            // 
-            // txtLexicos
-            // 
-            this.txtLexicos.BackColor = System.Drawing.Color.Black;
-            this.txtLexicos.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLexicos.ForeColor = System.Drawing.Color.White;
-            this.txtLexicos.Location = new System.Drawing.Point(32, 48);
-            this.txtLexicos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLexicos.Multiline = true;
-            this.txtLexicos.Name = "txtLexicos";
-            this.txtLexicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLexicos.Size = new System.Drawing.Size(398, 512);
-            this.txtLexicos.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(893, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 17);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Errores Sintacticos";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 17);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Errores Semanticos";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Errores Lexicos";
             // 
             // txtSintacticos
             // 
@@ -387,14 +350,64 @@ namespace compilador
             this.txtSintacticos.Size = new System.Drawing.Size(398, 512);
             this.txtSintacticos.TabIndex = 18;
             // 
-            // label7
+            // label6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Errores Lexicos";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(461, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(132, 17);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Errores Semanticos";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(893, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 17);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Errores Sintacticos";
+            // 
+            // txtLexicos
+            // 
+            this.txtLexicos.BackColor = System.Drawing.Color.Black;
+            this.txtLexicos.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLexicos.ForeColor = System.Drawing.Color.White;
+            this.txtLexicos.Location = new System.Drawing.Point(32, 48);
+            this.txtLexicos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLexicos.Multiline = true;
+            this.txtLexicos.Name = "txtLexicos";
+            this.txtLexicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLexicos.Size = new System.Drawing.Size(398, 512);
+            this.txtLexicos.TabIndex = 12;
+            // 
+            // txtSemanticos
+            // 
+            this.txtSemanticos.BackColor = System.Drawing.Color.Black;
+            this.txtSemanticos.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSemanticos.ForeColor = System.Drawing.Color.White;
+            this.txtSemanticos.Location = new System.Drawing.Point(464, 48);
+            this.txtSemanticos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSemanticos.Multiline = true;
+            this.txtSemanticos.Name = "txtSemanticos";
+            this.txtSemanticos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSemanticos.Size = new System.Drawing.Size(398, 512);
+            this.txtSemanticos.TabIndex = 11;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // chkDepurar
+            // 
+            this.chkDepurar.AutoSize = true;
+            this.chkDepurar.Location = new System.Drawing.Point(697, 316);
+            this.chkDepurar.Name = "chkDepurar";
+            this.chkDepurar.Size = new System.Drawing.Size(82, 21);
+            this.chkDepurar.TabIndex = 18;
+            this.chkDepurar.Text = "Depurar";
+            this.chkDepurar.UseVisualStyleBackColor = true;
+            this.chkDepurar.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FormPrincipal
             // 
@@ -445,5 +458,6 @@ namespace compilador
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLexicos;
         private System.Windows.Forms.TextBox txtSemanticos;
+        private System.Windows.Forms.CheckBox chkDepurar;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using compilador.AnalisisLexico;
+using compilador.AnalisisSintactico;
 using compilador.ManejadorErrores;
 using compilador.TablaSimbolos;
 using compilador.Transversal;
@@ -68,15 +69,15 @@ namespace compilador
 
                 try
                 {
-                    AnalizadorLexico AnaLex = new AnalizadorLexico();
-                    ComponenteLexico Componente = AnaLex.DevolverComponenteLexico();
+                    AnalizadorSintactico AnaSin = new AnalizadorSintactico();
+                    AnaSin.Analizar(chkDepurar.Checked);
+                   /*
                     while (!Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
                     {
                         Componente = AnaLex.DevolverComponenteLexico();
-                        
-
-
+                      
                     }
+                   */
                 }
                 catch(Exception excepcion)
                 {
@@ -180,13 +181,15 @@ namespace compilador
 
                 try
                 {
-                    AnalizadorLexico AnaLex = new AnalizadorLexico();
-                    ComponenteLexico Componente = AnaLex.DevolverComponenteLexico();
+                    AnalizadorSintactico AnaSin = new AnalizadorSintactico();
+                    AnaSin.Analizar(chkDepurar.Checked);
+                    /*
                     while (!Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
                     {
                         Componente = AnaLex.DevolverComponenteLexico();
               
                     }
+                    */
                 }
                 catch (Exception excepcion)
                 {
@@ -316,6 +319,11 @@ namespace compilador
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
