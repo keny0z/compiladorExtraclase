@@ -100,7 +100,7 @@ namespace compilador.AnalisisSintactico
 
         }
 
-        //<expresion> -> IN <entrada> | OUT <salida> | Epsilon
+        //<expresion> -> IN <entrada> <preexpresion> | OUT <salida> <preexpresion>
         private void Expresion(int nivel)
         {
             FormarEntrada(nivel, "<Expresion>");
@@ -109,6 +109,7 @@ namespace compilador.AnalisisSintactico
                 Pila.Push(Componente.ObtenerLexema());
                 Avanzar();
                 Entradas(nivel + 1);
+                Preexpresion(nivel + 1);
 
 
             }
@@ -117,13 +118,7 @@ namespace compilador.AnalisisSintactico
                 Pila.Push(Componente.ObtenerLexema());
                 Avanzar();
                 Salidas(nivel + 1);
-
-            }
-            else if (Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
-            {
-                Pila.Push(Componente.ObtenerLexema());
-                Avanzar();
-                
+                Preexpresion(nivel + 1);
 
             }
             else 
@@ -142,7 +137,24 @@ namespace compilador.AnalisisSintactico
 
             FormarSalida(nivel, "<Expresion>");
         }
-        //<entradas> -> VALOR <unidad_de_medida_terminal><acccion> | GET_TEMPERATURE <unidad_de_medida> | -11- SHUTDOWN <expresion> | -00- INIT <expresion>
+        //<preexpresion> -> Epsilon | <expresion>
+        private void Preexpresion(int nivel)
+        {
+            FormarEntrada(nivel, "<Preexpresion>");
+            if (Categoria.IN.Equals(Componente.ObtenerCategoria()) || Categoria.OUT.Equals(Componente.ObtenerCategoria()))
+            {
+                
+                Expresion(nivel + 1);
+            }
+            else
+            {
+                Avanzar();
+            }
+
+            
+            FormarSalida(nivel, "<Preexpresion>");
+        }
+        //<entrada> -> VALOR <unidad_de_medida><accion> | GET_TEMPERATURE <unidad_de_medida> | -11- SHUTDOWN  | -00- INIT 
         private void Entradas(int nivel)
         {
             FormarEntrada(nivel, "<Entradas>");
@@ -150,7 +162,7 @@ namespace compilador.AnalisisSintactico
             {
                 Pila.Push(Componente.ObtenerLexema());
                 Avanzar();
-                UnidadMedidaTerminal(nivel + 1);
+                UnidadMedida(nivel + 1);
                 Accion(nivel + 1);
 
 
@@ -171,7 +183,6 @@ namespace compilador.AnalisisSintactico
                     FormarEntrada(nivel, "<Entradas>");
                     Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
-                    Expresion(nivel + 1);
                     FormarSalida(nivel, "<Entradas>");
 
 
@@ -188,7 +199,6 @@ namespace compilador.AnalisisSintactico
                     FormarEntrada(nivel, "<Entradas>");
                     Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
-                    Expresion(nivel + 1); 
                     FormarSalida(nivel, "<Entradas>");
                 }
 
@@ -208,7 +218,8 @@ namespace compilador.AnalisisSintactico
             FormarSalida(nivel, "<Entradas>");
         }
 
-        //<salidas> -> VALOR <unidad_de_medida> | -11- ON <expresion> | -00- OFF <expresion>
+        //<salida> -> VALOR <unidad_de_medida> | -11- ON  | -00- OFF 
+
         private void Salidas(int nivel)
         {
             FormarEntrada(nivel, "<Salidas>");
@@ -230,7 +241,6 @@ namespace compilador.AnalisisSintactico
                     FormarEntrada(nivel, "<Salidas>");
                     Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
-                    Expresion(nivel + 1);
                     FormarSalida(nivel, "<Salidas>");
                 }
 
@@ -245,7 +255,6 @@ namespace compilador.AnalisisSintactico
                     FormarEntrada(nivel, "<Salidas>");
                     Pila.Push(Componente.ObtenerLexema());
                     Avanzar();
-                    Expresion(nivel + 1);
                     FormarSalida(nivel, "<Salidas>");
                 }
 
@@ -264,7 +273,7 @@ namespace compilador.AnalisisSintactico
             }
             FormarSalida(nivel, "<Salidas>");
         }
-        //<accion> -> INCREMENTAR <expresion> |DECREMENTAR <expresion>
+        //<accion> -> INCREMENTAR  |DECREMENTAR 
         private void Accion(int nivel)
         {
             FormarEntrada(nivel, "<Accion>");
@@ -272,7 +281,6 @@ namespace compilador.AnalisisSintactico
             {
                 Pila.Push(Componente.ObtenerLexema());
                 Avanzar();
-                Expresion(nivel + 1);
                 
 
             }
@@ -280,7 +288,6 @@ namespace compilador.AnalisisSintactico
             {
                 Pila.Push(Componente.ObtenerLexema());
                 Avanzar();
-                Expresion(nivel + 1);
 
             }
             else
@@ -299,60 +306,26 @@ namespace compilador.AnalisisSintactico
         }
 
 
-        //<unidad_de_medida_terminal> -> C|F|K|R 
-        private void UnidadMedidaTerminal(int nivel)
-        {
-            FormarEntrada(nivel, "<UnidadMedidaTerminal>");
-            if (Categoria.CENTIGRADOS.Equals(Componente.ObtenerCategoria()))
-            {
-                Avanzar();
-            }
-            else if (Categoria.FAHRENHEIT.Equals(Componente.ObtenerCategoria()))
-            {
-                Avanzar();
-            }
-            else if (Categoria.KELVIN.Equals(Componente.ObtenerCategoria()))
-            {
-                Avanzar();
-            }
-            else if (Categoria.RANKINE.Equals(Componente.ObtenerCategoria()))
-            {
-                Avanzar();
-            }
-            else
-            {
-                string Falla = "Unidad de medida no valida: " + Componente.ObtenerLexema();
-                string Causa = "Recibí " + Componente.ObtenerLexema() + "...";
-                string Solucion = "Asegurese de ingresar una unidad de memida valida (C, F, K, R)";
 
-                Error Error = ManejadorErrores.Error.Crear(Componente.ObtenerNumeroLinea(), Componente.ObtenerPosicionInicial(), Componente.ObtenerPosicionFinal(), Falla, Causa, Solucion, TipoError.SINTACTICO);
-                GestorErrores.ObtenerInstancia().Agregar(Error);
-            }
-            FormarSalida(nivel, "<UnidadMedidaTerminal>");
-        }
-        //<unidad_de_medida> -> C <expresion>|F <expresion>|K <expresion>|R <expresion> 
+        //<unidad_de_medida> -> C |F |K |R 
         private void UnidadMedida(int nivel)
         {
             FormarEntrada(nivel, "<UnidadMedida>");
             if (Categoria.CENTIGRADOS.Equals(Componente.ObtenerCategoria()))
             {
                 Avanzar();
-                Expresion(nivel + 1);
             }
             else if (Categoria.FAHRENHEIT.Equals(Componente.ObtenerCategoria()))
             {
                 Avanzar();
-                Expresion(nivel + 1);
             }
             else if (Categoria.KELVIN.Equals(Componente.ObtenerCategoria()))
             {
                 Avanzar();
-                Expresion(nivel + 1);
             }
             else if (Categoria.RANKINE.Equals(Componente.ObtenerCategoria()))
             {
                 Avanzar();
-                Expresion(nivel + 1);
             }
             else
             {
