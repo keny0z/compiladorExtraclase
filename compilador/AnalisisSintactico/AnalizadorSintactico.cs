@@ -146,9 +146,21 @@ namespace compilador.AnalisisSintactico
                 
                 Expresion(nivel + 1);
             }
+            else if (Categoria.FIN_ARCHIVO.Equals(Componente.ObtenerCategoria()))
+            {
+
+            }
             else
             {
-                Avanzar();
+                string Falla = "Componente no válido: " + Componente.ObtenerLexema();
+                string Causa = "Recibí " + Componente.ObtenerCategoria() + " ...";
+                string Solucion = "Asegúrese de que el componente sea valido en el lenguaje";
+
+
+                Error Error = ManejadorErrores.Error.Crear(Componente.ObtenerNumeroLinea(), Componente.ObtenerPosicionInicial(), Componente.ObtenerPosicionFinal(), Falla, Causa, Solucion, ManejadorErrores.TipoError.SINTACTICO);
+                GestorErrores.ObtenerInstancia().Agregar(Error);
+
+                throw new Exception("Error tipo stopper durante el análisis sintáctico. Por favor verifique la consola de errores...");
             }
 
             
